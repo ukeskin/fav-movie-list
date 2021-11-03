@@ -1,5 +1,10 @@
-import React from "react";
+import * as React from "react";
+import Search from "./components/Search";
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div className="App">
+      <Search />
+    </div>
+  );
 }
