@@ -3,7 +3,10 @@ import { MdFavoriteBorder } from "react-icons/md";
 
 export const MovieCard = ({ movie, handleFavorite }) => {
   return (
-    <div className="flex items-center justify-between" key={movie.imdbID}>
+    <div
+      className="flex items-center justify-between hover:bg-gray-100 p-0.5"
+      key={movie.imdbID}
+    >
       <div className="flex items-center gap-2">
         <img className="w-12" src={movie.Poster} alt={movie.Title} />
         <h2 className="text-gray-800 text-lg">{movie.Title}</h2>

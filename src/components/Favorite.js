@@ -21,15 +21,15 @@ export default function Favorite() {
     });
   };
   return (
-    <div className="w-2/3 flex  flex-col items-center justify-center border-l">
+    <div className="md:w-2/3 w-full mt-0 md:mt-5 flex  flex-col items-center justify-center md:border-t-0 border-t-2 ">
       <div
         id="fav-movies"
-        className="w-1/2 flex gap-2 flex-col justify-between items-center overflow-auto"
+        className="md:w-1/2 w-full flex gap-2 flex-col justify-between items-center p-2 rounded"
       >
         {favMovies &&
           favMovies.map((item, number) => (
             <div
-              className="group w-full flex justify-between items-center p-2"
+              className="group w-full flex justify-between items-center"
               key={item.imdbID}
             >
               <div className="flex items-center gap-2">
