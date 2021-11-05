@@ -1,15 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/query";
-import { moviesApi } from "../services/movies";
-
+import moviesReducer from "../features/moviesSlice";
+import favMoviesReducer from "../features/favMovies";
 const store = configureStore({
   reducer: {
-    [moviesApi.reducerPath]: moviesApi.reducer,
+    movies: moviesReducer,
+    favMovies: favMoviesReducer,
   },
-
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(moviesApi.middleware),
 });
-setupListeners(store.dispatch);
 
 export default store;
