@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFavMovie } from "../features/favMovies";
 import { MdDeleteOutline } from "react-icons/md";
 import html2canvas from "html2canvas";
+
 export default function Favorite() {
   const dispatch = useDispatch();
   const { favMovies } = useSelector((state) => state.favMovies);
+
   const downloadList = async () => {
     const node = document.getElementById("fav-movies");
     await html2canvas(node, {
